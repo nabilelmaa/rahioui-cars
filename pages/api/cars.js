@@ -18,10 +18,6 @@ export default async function handler(req, res) {
     cars
   INNER JOIN
     manufacturers ON cars.manufacturer_id = manufacturers.id
-  LEFT JOIN
-    rentals ON cars.id = rentals.car_id
-  WHERE
-    rentals.car_id IS NULL;
     `);
 
     res.status(200).json(result.rows);
@@ -30,3 +26,8 @@ export default async function handler(req, res) {
     res.status(500).json({ error: "Internal Server Error" });
   }
 }
+
+// LEFT JOIN
+// rentals ON cars.id = rentals.car_id
+// WHERE
+// rentals.car_id IS NULL;

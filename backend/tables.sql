@@ -77,3 +77,10 @@ INSERT INTO cars (manufacturer_id, model, fuel_type, transmission_type, producti
 (2, 'Fugo', 'Gas','Manual', 2017, '/images/ford/ford03.png', 5, 200),
 (3, 'HN', 'Gas','Automatic',2020, '/images/honda/honda03.png', 5, 290),
 (4, 'Neuvo Gol', 'Gas', 'Manual',2022, '/images/golf/golf03.png', 5, 300);
+
+
+SELECT * FROM cars;
+SELECT * FROM manufacturers;
+SELECT * FROM rentals;
+SELECT * FROM store_location;
+
