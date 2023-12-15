@@ -20,6 +20,7 @@ CREATE TABLE cars (
 DROP TABLE IF EXISTS rentals CASCADE;
 CREATE TABLE rentals (
   id SERIAL PRIMARY KEY,
+  user_id VARCHAR(255) REFERENCES users(user_id),
   car_id INTEGER REFERENCES cars(id),
   store_loc INTEGER REFERENCES store_location(id),
   pick_up_date DATE NOT NULL,
